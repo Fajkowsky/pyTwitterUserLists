@@ -1,0 +1,6 @@
+TwitterAPI==2.2.8
+argparse==1.2.1
+oauthlib==0.7.2
+requests==2.5.1
+requests-oauthlib==0.4.2
+wsgiref==0.1.2
