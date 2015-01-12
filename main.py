@@ -1,6 +1,6 @@
 import argparse
 
-from tweet import get_users, new_data
+from tweet import get_users, new_data, get_links
 
 
 def get_parser():
@@ -22,8 +22,10 @@ def run():
         new_data(users)
 
     elif args.file:
-        pass
-
+        lists = get_links(args.file)
+        for list in lists:
+            users = get_users(list)
+            new_data(users)
 
 if __name__ == '__main__':
     run()

@@ -12,6 +12,11 @@ api = TwitterAPI(
 )
 
 
+def get_links(path):
+    with open(path, "r") as input_file:
+        return input_file.readlines()
+
+
 def parse_url(url):
     regexp = re.search(r'(?P<acc>[a-zA-Z]*)/lists/(?P<list>.*)', url)
     name = regexp.group('acc')
