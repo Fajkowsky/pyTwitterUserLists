@@ -1,5 +1,5 @@
 import argparse
-
+from tweet import parse_url
 
 def get_parser():
     parser = argparse.ArgumentParser()
@@ -16,7 +16,7 @@ def run():
         parser.error('You must use only one option - url or file.')
 
     if args.url:
-        pass
+        parse_url(args.url)
 
 
 if __name__ == '__main__':
