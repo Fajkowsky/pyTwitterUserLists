@@ -5,8 +5,8 @@ from tweet import get_users, new_data, get_links
 
 def get_parser():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--file', type=str)
-    parser.add_argument("--url", help='Use url as twitter.com/{account}/lists/{list name}', type=str)
+    parser.add_argument('--file', help='', type=str)
+    parser.add_argument("--url", help='Use url as "twitter.com/{account}/lists/{list name}"', type=str)
 
     return parser
 
