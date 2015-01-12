@@ -1,6 +1,6 @@
 import argparse
 
-from tweet import get_users
+from tweet import get_users, new_data
 
 
 def get_parser():
@@ -18,7 +18,11 @@ def run():
         parser.error('You must use only one option - url or file.')
 
     if args.url:
-        get_users(args.url)
+        users = get_users(args.url)
+        new_data(users)
+
+    elif args.file:
+        pass
 
 
 if __name__ == '__main__':
