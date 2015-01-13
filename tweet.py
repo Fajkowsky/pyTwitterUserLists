@@ -28,7 +28,7 @@ def parse_url(url):
 
 def get_users(url):
     def get_list_members(account, slug):
-        response = api.request('lists/members', {'owner_screen_name': account, 'slug': slug})
+        response = api.request('lists/members', {'count': 5000, 'owner_screen_name': account, 'slug': slug})
         if response.status_code == 200:
             for item in response:
                 return item['users']
