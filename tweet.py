@@ -42,7 +42,7 @@ def get_users(url):
     return []
 
 
-def new_data(users):
+def new_data(users, url):
     with open('template', "r") as input_file:
         template = unicode(input_file.read())
 
@@ -67,6 +67,7 @@ def new_data(users):
                 lang=user['lang'],
                 location=user['location'],
                 profile_image_url=user['profile_image_url'],
-                id=user['id']
+                id=user['id'],
+                url=url
             )
             output_file.write(data.encode('UTF-8') + '\n')

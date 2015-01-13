@@ -19,13 +19,13 @@ def run():
 
     if args.url:
         users = get_users(args.url)
-        new_data(users)
+        new_data(users, args.url)
 
     elif args.file:
         lists = get_links(args.file)
         for list in lists:
             users = get_users(list)
-            new_data(users)
+            new_data(users, list)
 
 if __name__ == '__main__':
     run()
